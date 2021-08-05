@@ -5,7 +5,7 @@ const calculateSomethingExpensive = () => {
   return 5;
 };
 
-export default function LazyInit() {
+export default function LazyInit() {  //原理
   const [count, setCount] = useState(() => calculateSomethingExpensive());
 
   return (

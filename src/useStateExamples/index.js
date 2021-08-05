@@ -4,8 +4,9 @@ import RouteWithSubRoutes from "../Components/RouteWithSubRoutes";
 import ObjectExamples from "./object";
 import BatchUpdate from './batchUpdate';
 import LazyInit from './lazyInit';
+import BatchUpdateExplain from './batchUpdateExplain';
 
-export { ObjectExamples, BatchUpdate, LazyInit };
+export { ObjectExamples, BatchUpdate, LazyInit, BatchUpdateExplain };
 
 export default function UseStateExamples({ routes }) {
   return (
@@ -17,6 +18,9 @@ export default function UseStateExamples({ routes }) {
         </li>
         <li>
           <Link to="/useState/BatchUpdate">异步更新</Link>
+        </li>
+        <li>
+          <Link to="/useState/BatchUpdateExplain">batchUpdate</Link>
         </li>
         <li>
           <Link to="/useState/LazyInit">参数惰性初始化</Link>

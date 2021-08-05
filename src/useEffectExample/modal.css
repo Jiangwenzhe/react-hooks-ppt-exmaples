@@ -1,0 +1,151 @@
+* {
+  box-sizing: border-box;
+}
+
+.App__header {
+  height: 72px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+  margin-bottom: 24px;
+}
+
+.App {
+  font-family: sans-serif;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.App__content {
+  background: white;
+  padding: 24px;
+  border-radius: 4px;
+  border: 1px solid black;
+  box-shadow: 2px 1px 3px rgba(0, 0, 0, 0.25);
+}
+
+.Modal {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 250px;
+  height: 250px;
+  position: absolute;
+  border-radius: 4px;
+  background: white;
+}
+
+.Modal--purple {
+  border: 10px solid rebeccapurple;
+}
+
+.Modal--lime {
+  border: 10px solid limegreen;
+}
+
+/* 02-use-effect */
+.WeatherDisplay ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  list-style: none;
+  margin: 0;
+}
+
+.WeatherDisplay li {
+  margin: 0 4px 12px 4px;
+}
+
+.WeatherDisplay li button {
+  border: 1px solid lightgray;
+  border-radius: 4px;
+  font-weight: bold;
+  min-width: 120px;
+  padding: 8px;
+  cursor: pointer;
+}
+
+.WeatherDisplay__data-row {
+  display: flex;
+  justify-content: space-between;
+}
+
+.WeatherDisplay__data-row li {
+  /* background: white; */
+  border: 1px solid black;
+  /* color: black; */
+  border-radius: 4px;
+  padding: 12px 8px;
+}
+
+.WeatherDisplay__data-row li span {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+
+.active {
+  background: #0a3666;
+  color: white;
+}
+
+/* 01-use-state */
+
+.Cart {
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  max-width: 320px;
+}
+
+.CartItem {
+  align-items: center;
+  border: 1px solid black;
+  border-radius: 4px;
+  display: flex;
+  font-size: 16px;
+  justify-content: space-between;
+  padding: 12px;
+  margin-bottom: 12px;
+}
+
+.CartItem__btn {
+  background: white;
+  border: 1px solid black;
+  cursor: pointer;
+  font-weight: bold;
+  height: 24px;
+  padding: 0;
+  width: 24px;
+}
+
+.CartItem__btn:hover {
+  background: orange;
+  color: white;
+}
+
+.CartItem__input {
+  height: 24px;
+  margin: 0 4px;
+  max-width: 36px;
+  padding: 0;
+  text-align: center;
+}
+
+.Cart__total {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.Cart__total-label {
+  font-size: 14px;
+  padding: 8px;
+  text-align: center;
+}

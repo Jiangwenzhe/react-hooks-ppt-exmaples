@@ -5,6 +5,7 @@ import UseStateExamples, {
   ObjectExamples,
   BatchUpdate,
   LazyInit,
+  BatchUpdateExplain
 } from "./useStateExamples";
 import UseEffectExamples, {
   WhenEffectExec,
@@ -27,6 +28,10 @@ const routes = [
       {
         path: "/useState/BatchUpdate",
         component: BatchUpdate,
+      },
+      {
+        path: "/useState/BatchUpdateExplain",
+        component:BatchUpdateExplain,
       },
       {
         path: "/useState/LazyInit",

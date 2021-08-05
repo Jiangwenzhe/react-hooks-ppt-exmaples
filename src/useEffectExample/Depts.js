@@ -9,11 +9,11 @@ export default function ProductPage() {
   const [count, setCount] = useState(0);
   const [productId, setProductId] = useState(0);
 
-  // const fetchProduct = useCallback(async (productId) => {
+  // const fetchProduct = useCallback(async () => {
   //   console.log("into fetchProduct");
   //   await fetchFunc(productId);
   //   setProduct(1);
-  // }, [])
+  // }, [productId])
 
   async function fetchProduct() {
     console.log("into fetchProduct");
