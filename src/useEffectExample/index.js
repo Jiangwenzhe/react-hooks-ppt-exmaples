@@ -3,7 +3,7 @@ import { Switch, Link } from "react-router-dom";
 import RouteWithSubRoutes from "../Components/RouteWithSubRoutes";
 import WhenEffectExec from "./whenEffectExec";
 import Depts from "./Depts";
-import useLayoutEffectExample from './useLayoutEffectExample';
+import useLayoutEffectExample from "./useLayoutEffectExample";
 
 export { WhenEffectExec, Depts, useLayoutEffectExample };
 
@@ -24,12 +24,19 @@ export default function UseEffectExamples({ routes }) {
           </Link>
         </li>
       </ul>
-
-      <Switch>
-        {routes.map((route, i) => (
-          <RouteWithSubRoutes key={i} {...route} />
-        ))}
-      </Switch>
+      <div
+        style={{
+          padding: "20px",
+          border: "2px dashed black",
+          margin: "10px 10px",
+        }}
+      >
+        <Switch>
+          {routes.map((route, i) => (
+            <RouteWithSubRoutes key={i} {...route} />
+          ))}
+        </Switch>
+      </div>
     </div>
   );
 }

@@ -25,7 +25,7 @@ function useModal() {
 export default function ModalExamples() {
   const [modal, toggleModal] = useModal();
   return (
-    <div className="App">
+    <div>
       <div>
         {modal}
         <button onClick={toggleModal}>打开弹窗</button>

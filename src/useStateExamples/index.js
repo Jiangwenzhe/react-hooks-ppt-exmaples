@@ -2,9 +2,9 @@ import React from "react";
 import { Switch, Link } from "react-router-dom";
 import RouteWithSubRoutes from "../Components/RouteWithSubRoutes";
 import ObjectExamples from "./object";
-import BatchUpdate from './batchUpdate';
-import LazyInit from './lazyInit';
-import BatchUpdateExplain from './batchUpdateExplain';
+import BatchUpdate from "./batchUpdate";
+import LazyInit from "./lazyInit";
+import BatchUpdateExplain from "./batchUpdateExplain";
 
 export { ObjectExamples, BatchUpdate, LazyInit, BatchUpdateExplain };
 
@@ -27,11 +27,13 @@ export default function UseStateExamples({ routes }) {
         </li>
       </ul>
 
-      <Switch>
-        {routes.map((route, i) => (
-          <RouteWithSubRoutes key={i} {...route} />
-        ))}
-      </Switch>
+      <div style={{ padding: '20px', border: '2px dashed black', margin: '10px 10px'}}>
+        <Switch>
+          {routes.map((route, i) => (
+            <RouteWithSubRoutes key={i} {...route} />
+          ))}
+        </Switch>
+      </div>
     </div>
   );
 }

@@ -14,12 +14,19 @@ export default function useRefExamples({ routes }) {
           <Link to="/useMemo/InfinityRender">无限渲染的修复</Link>
         </li>
       </ul>
-
-      <Switch>
-        {routes.map((route, i) => (
-          <RouteWithSubRoutes key={i} {...route} />
-        ))}
-      </Switch>
+      <div
+        style={{
+          padding: "20px",
+          border: "2px dashed black",
+          margin: "10px 10px",
+        }}
+      >
+        <Switch>
+          {routes.map((route, i) => (
+            <RouteWithSubRoutes key={i} {...route} />
+          ))}
+        </Switch>
+      </div>
     </div>
   );
 }

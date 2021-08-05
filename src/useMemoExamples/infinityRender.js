@@ -8,5 +8,5 @@ export default function InfinityRender() {
     setCount(Math.random()); // 修改 count
     alert("render");
   }, [value]); // value 作为更新依赖
-  return <div className="App">useMemo 实例 Count: {count}</div>;
+  return <div>useMemo 实例 Count: {count}</div>;
 }

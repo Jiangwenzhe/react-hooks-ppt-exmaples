@@ -1,11 +1,11 @@
+  // 子组件渲染 -> 子组件 effect -> 父组件的 effect -> 父组件 effect 的 cleanup -> 子组件渲染 -> etc ...
+  // effect 是在每次渲染后执行的s
 import { useState, useEffect } from "react";
 
 export default function Father() {
   const [count, setCount] = useState(0);
 
-  // 子组件渲染 -> 子组件 effect -> 父组件的 effect -> 父组件 effect 的 cleanup -> 子组件渲染 -> etc ...
 
-  // effect 是在每次渲染后执行的
   useEffect(() => {
     console.log("爸爸组件执行 effect ", count);
     return () => {
@@ -14,7 +14,7 @@ export default function Father() {
   }, [count]);
 
   return (
-    <div className="App">
+    <div>
       <h1>{count}</h1>
       <button onClick={() => setCount(count + 1)}>click +1 </button>
       <Son />

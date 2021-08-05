@@ -1,7 +1,7 @@
 import React from "react";
 import { Switch, Link } from "react-router-dom";
 import RouteWithSubRoutes from "../Components/RouteWithSubRoutes";
-import WrapperModal from './wrapperModal';
+import WrapperModal from "./wrapperModal";
 
 export { WrapperModal };
 
@@ -14,12 +14,19 @@ export default function useRefExamples({ routes }) {
           <Link to="/useRef/WrapperModal">封装 Modal</Link>
         </li>
       </ul>
-
-      <Switch>
-        {routes.map((route, i) => (
-          <RouteWithSubRoutes key={i} {...route} />
-        ))}
-      </Switch>
+      <div
+        style={{
+          padding: "20px",
+          border: "2px dashed black",
+          margin: "10px 10px",
+        }}
+      >
+        <Switch>
+          {routes.map((route, i) => (
+            <RouteWithSubRoutes key={i} {...route} />
+          ))}
+        </Switch>
+      </div>
     </div>
   );
 }

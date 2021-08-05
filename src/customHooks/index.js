@@ -2,7 +2,7 @@ import React from "react";
 import { Switch, Link } from "react-router-dom";
 import RouteWithSubRoutes from "../Components/RouteWithSubRoutes";
 import customCounter from "./customCounter";
-import customModal from './customModal';
+import customModal from "./customModal";
 
 export { customCounter, customModal };
 
@@ -18,12 +18,19 @@ export default function customHooksExamples({ routes }) {
           <Link to="/customHook/customModal">自定义 Modal</Link>
         </li>
       </ul>
-
-      <Switch>
-        {routes.map((route, i) => (
-          <RouteWithSubRoutes key={i} {...route} />
-        ))}
-      </Switch>
+      <div
+        style={{
+          padding: "20px",
+          border: "2px dashed black",
+          margin: "10px 10px",
+        }}
+      >
+        <Switch>
+          {routes.map((route, i) => (
+            <RouteWithSubRoutes key={i} {...route} />
+          ))}
+        </Switch>
+      </div>
     </div>
   );
 }
